@@ -1,5 +1,6 @@
 import './style.css';
 import { Layer } from './Layer/index';
+import { Drink } from './Drink/index';
 
 console.log('funguju!');
 
@@ -37,7 +38,7 @@ order.addEventListener('click', (e) => {
 });
 
 // Seznam ingrediencí
-const layers = [
+/*let layers = [
   {
     color: '#feeeca',
     label: 'mléčná pěna',
@@ -55,4 +56,4 @@ const layers = [
 layers.forEach((layer) => {
   const appElm = document.querySelector('.drink__info');
   appElm.innerHTML += Layer(layer);
-});
+});*/
