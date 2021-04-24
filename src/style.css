@@ -246,8 +246,9 @@ nav a:hover {
   font-weight: bold;
   text-align: center;
   font-size: 3rem;
-  padding-top: 2rem;
-  color: rgb(255, 94, 0);
+  padding: 1rem;
+  color: white;
+  background-color: #ea946f;
 }
 
 .contacts {
