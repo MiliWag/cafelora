@@ -1,4 +1,5 @@
 import './style.css';
+import { Layer } from './Layer/index';
 
 console.log('funguju!');
 
@@ -18,9 +19,16 @@ allItems.forEach((item) => {
 
 const order = document.querySelector('.order-btn');
 const selectedOrder = document.querySelector('.drink__cup');
+let isOrdered = true;
 
 order.addEventListener('click', (e) => {
-  const buttonAfterClick = e.target;
-  selectedOrder.classList.toggle('drink__cup--selected');
-  order.textContent = 'Zrušit';
+  if (isOrdered) {
+    order.textContent = 'Zrušit';
+    selectedOrder.classList.add('drink__cup--selected');
+    isOrdered = false;
+  } else {
+    order.textContent = 'Objednat';
+    selectedOrder.classList.remove('drink__cup--selected');
+    isOrdered = true;
+  }
 });
