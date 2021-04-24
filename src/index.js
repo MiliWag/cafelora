@@ -3,6 +3,7 @@ import { Layer } from './Layer/index';
 
 console.log('funguju!');
 
+// rozbalovací menu
 const nav = document.querySelector('#nav-btn');
 const navigation = document.querySelector('nav');
 const allItems = document.querySelectorAll('.nav_link');
@@ -16,6 +17,8 @@ allItems.forEach((item) => {
     navigation.classList.toggle('nav-closed');
   });
 });
+
+// Tlačítko na objednání produktu
 
 const order = document.querySelector('.order-btn');
 const selectedOrder = document.querySelector('.drink__cup');
@@ -31,4 +34,25 @@ order.addEventListener('click', (e) => {
     selectedOrder.classList.remove('drink__cup--selected');
     isOrdered = true;
   }
+});
+
+// Seznam ingrediencí
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
+layers.forEach((layer) => {
+  const appElm = document.querySelector('.drink__info');
+  appElm.innerHTML += Layer(layer);
 });
