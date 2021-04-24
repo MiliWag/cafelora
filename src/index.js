@@ -15,3 +15,12 @@ allItems.forEach((item) => {
     navigation.classList.toggle('nav-closed');
   });
 });
+
+const order = document.querySelector('.order-btn');
+const selectedOrder = document.querySelector('.drink__cup');
+
+order.addEventListener('click', (e) => {
+  const buttonAfterClick = e.target;
+  selectedOrder.classList.toggle('drink__cup--selected');
+  order.textContent = 'Zrušit';
+});
